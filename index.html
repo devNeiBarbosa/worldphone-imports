@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>WorldPhone Imports</title>
+</head>
+
+<body>
+  <header>
+    <div class="container-header-left">
+      <a href="index.html"><img src="assets/logo.png" alt="website logo" class="logo"></a>
+      <nav class="nav-header">
+        <button class="products" id="products">Produtos
+          <img src="assets/Expand-Arrow.png" alt="expand arrow icon" class="arrow-expand">
+        </button>
+        <ul class="products-list-info">
+          <li class="list-item"><a href="#iphones">iPhones</a></li>
+          <li class="list-item"><a href="#smartphones">Smartphones</a></li>
+          <li class="list-item"><a href="#smartwatch">Smartwatch</a></li>
+          <li class="list-item"><a href="#accessories">Acessórios</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="contact">Contato</a>
+    </div>
+
+    <div class="container-header-right">
+      <button class="cart"><img src="assets/cart.png" alt="shopping cart icon"></button>
+      <div class="background-cart"></div>
+      <form action="#" class="search-form">
+        <input type="text" placeholder="Procurar ..." class="input-search" name="search">
+        <button type="submit" class="search"><img src="assets/Search.png" alt="search icon"></button>
+      </form>
+      <button class="login"><a href="pages/login.html">Login</a></button>
+    </div>
+  </header>
+
+  <section class="container-cart">
+    <div class="container-info-to-cart">
+      <!-- Vão ser chamados pelo foreach do js -->
+    </div>
+
+    <div class="buttons-checkout">
+      <button class="view-more">Ver Mais</button>
+      <button class="checkout">Finalizar Compra</button>
+    </div>
+  </section>
+
+  <main id="home">
+    <div class="info-main">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-block w-100" alt="Primeiro Slide"></div>
+            <div class="container-promotion-info-1">
+              <!-- Vão ser chamados pelo foreach do js -->
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-block w-100" alt="Segundo Slide"></div>
+            <div class="container-promotion-info-2">
+              <!-- Vão ser chamados pelo foreach do js -->
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-block w-100" alt="Terceiro Slide"></div>
+            <div class="container-promotion-info-3">
+              <!-- Vão ser chamados pelo foreach do js -->
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-block w-100" alt="Quarto Slide"></div>
+            <div class="container-promotion-info-4">
+              <!-- Vão ser chamados pelo foreach do js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="iphones" id="iphones">
+    <div class="container-info-name">
+      <div class="info-name">
+        <p>iPhones</p>
+      </div>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="iphone-list-1">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="iphone-list-2">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="smartphones" id="smartphones">
+    <div class="container-info-name">
+      <div class="info-name">
+        <p>Smartphones</p>
+      </div>
+    </div>
+
+    <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="smartphone-list-1">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="smartphone-list-2">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="smartphone-list-3">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="smartwatch" id="smartwatch">
+    <div class="container-info-name">
+      <div class="info-name">
+        <p>Smartwatch</p>
+      </div>
+    </div>
+
+    <div class="smartwatch-list">
+      <!-- Vão ser chamados pelo foreach do js -->
+    </div>
+  </section>
+
+  <section class="accessories" id="accessories">
+    <div class="container-info-name">
+      <div class="info-name">
+        <p>Acessórios</p>
+      </div>
+    </div>
+
+    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="accessories-list-1">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="accessories-list-2">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="accessories-list-3">
+            <!-- Vão ser chamados pelo foreach do js -->
+
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-form" id="contact">
+    <div class="info-name">
+      <p>Entre em Contato</p>
+    </div>
+    <div class="form">
+      <form >
+        <div class="container-form">
+          <div class="container-form-left">
+            <div>
+              <p class="label">Nome <span>*</span></p>
+              <input type="text" id="name" placeholder="Seu nome" required />
+            </div>
+
+            <div>
+              <p class="label">Email <span>*</span></p>
+              <input type="email" id="email" placeholder="cliente@email.com" required />
+            </div>
+
+            <div>
+              <p class="label">Telefone <span>*</span></p>
+              <input type="number" id="telefone" placeholder="(99) 99999-9999" requeride>
+            </div>
+          </div>
+
+          <div class="container-form-right">
+            <textarea id="message" placeholder="Digite sua mensagem aqui ..." required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="to-send">Enviar</button>
+      </form>
+    </div>
+  </section>
+  
+  <div id="notification-container"></div>
+
+  <footer class="container-footer">
+    <div class="footer">
+      <div class="footer-info">
+        <h4>Informações</h4>
+        <p>&copy; 2024 Todos os direitos reservados. WorldPhone Imports LTDA.</p>
+        <p>O lugar ideal para adquirir seu novo smartphone!</p>
+        <div class="icons-redes-sociais">
+          <a href="#" target="_blank"><img src="assets/ig-icon.svg" alt="Ícone Instagram" class="ig"></a>
+          <a href="#" target="_blank"><img src="assets/wppicon.svg" alt="Ícone Whatsapp" class="wpp"></a>
+        </div>
+      </div>
+
+      <div class="products-list-info footer-links">
+        <h4>Links Úteis</h4>
+        <p><a href="#home">Início</a></p>
+        <p><a href="#iphones">iPhones</a></p>
+        <p><a href="#smartphones">Smartphones</a></p>
+        <p><a href="#smartwatch">Smartwatch</a></p>
+        <p><a href="#accessories">Acessórios</a></p>
+      </div>
+
+      <div class="footer-intitucional">
+        <h4>Institucional</h4>
+        <p>CNPJ: XX. XXX. XXX/0001-XX</p>
+        <p><a href="#localizacao">Endereço: Rua sem saída, 234</a></p>
+        <p><a href="#politica-de-privacidade">Política de Privacidade</a></p>
+        <p><a href="#duvidas-frequentes">Dúvidas Frequentes</a></p>
+        <p><a href="#ajuda">Ajuda</a></p>
+        <p><a href="#acessibilidade">Acessibilidade</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="chatbot-button"><img src="assets/chatbot.png" alt="ChatBot icon" class="chatbot"></button>
+
+  <div class="chat-bot">
+    <div class="chat-header">
+      <div class="avatar">
+        <img src="assets/chatbot-avatar.png" alt="ChatBot icon" class="avatar-img">
+      </div>
+      <div>Atendente Virtual</div>
+    </div>
+    <div id="chat-container"></div>
+    <div class="input-container">
+      <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
+      <button id="send-button">Enviar</button>
+    </div>
+  </div>
+
+  <div class="background-chatbot"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="js/chatbot.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/contactForm.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
