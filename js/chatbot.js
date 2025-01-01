@@ -14,6 +14,14 @@ const faqs = {
   'é seguro comprar online com vocês?': 'Sim, nossa loja online é totalmente confiável, com mais de 5 anos de credibilidade no mercado. Enviamos todos os produtos com nota fiscal e garantia, assegurando uma compra sem riscos para o consumidor.'
 };
 
+function disableButtonContainer(container) {
+  const buttons = container.querySelectorAll('button:not(.whatsapp-button):not(.restart-button)');
+  buttons.forEach(button => {
+    button.disabled = true;
+    button.classList.add('disabled');
+  });
+}
+
 function addMessage(message, sender, options = []) {
   const messageElement = document.createElement('div');
   messageElement.classList.add('message', sender);
@@ -28,6 +36,7 @@ function addMessage(message, sender, options = []) {
       optionButton.classList.add('option-button');
       optionButton.textContent = option;
       optionButton.addEventListener('click', () => {
+        disableButtonContainer(optionsContainer);
         handleOptionClick(option);
       });
       optionsContainer.appendChild(optionButton);
@@ -48,14 +57,13 @@ function showTypingIndicator(show) {
       typingIndicator.textContent = 'Digitando...';
       chatContainer.appendChild(typingIndicator);
       chatContainer.scrollTop = chatContainer.scrollHeight;
-      setTimeout(() => inputField.focus(), 100);
     }
   } else {
     if (typingIndicator) {
       typingIndicator.remove();
-      setTimeout(() => inputField.focus(), 100);
     }
   }
+  setTimeout(() => inputField.focus(), 100);
 }
 
 function handleOptionClick(option) {
@@ -85,7 +93,11 @@ function askIfResolved() {
   }, 500);
 
   setTimeout(() => {
-    addMessage('O seu problema foi resolvido?', 'bot', ['Sim', 'Não']);
+    const yesNoContainer = document.createElement('div');
+    yesNoContainer.classList.add('options-container');
+    const options = ['Sim', 'Não'];
+    
+    addMessage('O seu problema foi resolvido?', 'bot', options);
     showTypingIndicator(false);
     setTimeout(() => inputField.focus(), 100);
   }, 2000);
@@ -105,7 +117,10 @@ function handleYesResponse() {
       const ratingButton = document.createElement('button');
       ratingButton.classList.add('rating-button');
       ratingButton.textContent = i;
-      ratingButton.addEventListener('click', () => handleRating(i));
+      ratingButton.addEventListener('click', () => {
+        disableButtonContainer(ratingContainer);
+        handleRating(i);
+      });
       ratingContainer.appendChild(ratingButton);
     }
     showTypingIndicator(false);
@@ -120,13 +135,17 @@ function handleNoResponse() {
   }, 500);
 
   setTimeout(() => {
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('options-container');
+    
     const whatsappButton = document.createElement('button');
     whatsappButton.classList.add('whatsapp-button');
     whatsappButton.textContent = 'Falar com um atendente';
     whatsappButton.addEventListener('click', () => {
       window.open('https://wa.me/5511999999999', '_blank');
     });
-    chatContainer.appendChild(whatsappButton);
+    buttonContainer.appendChild(whatsappButton);
+    chatContainer.appendChild(buttonContainer);
     showTypingIndicator(false);
     setTimeout(() => inputField.focus(), 100);
   }, 1000);
@@ -138,8 +157,9 @@ function handleNoResponse() {
   setTimeout(() => {
     showTypingIndicator(false);
     addMessage('Sua sessão foi encerrada. Fale conosco novamente quando quiser!', 'bot');
-    const restartButton = document.createElement('button');
+    
     setTimeout(() => {
+      const restartButton = document.createElement('button');
       restartButton.textContent = 'Reiniciar Conversa';
       restartButton.classList.add('restart-button');
       restartButton.addEventListener('click', resetChat);
@@ -152,9 +172,6 @@ function handleNoResponse() {
 
 function handleRating(rating) {
   addMessage(`Minha avaliação: ${rating}`, 'user');
-  
-  const buttons = document.querySelectorAll('.rating-button');
-  buttons.forEach(button => button.disabled = true);
 
   setTimeout(() => {
     showTypingIndicator(true);
@@ -173,8 +190,9 @@ function handleRating(rating) {
   setTimeout(() => {
     showTypingIndicator(false);
     addMessage('Sua sessão foi encerrada. Fale conosco novamente quando quiser!', 'bot');
-    const restartButton = document.createElement('button');
+    
     setTimeout(() => {
+      const restartButton = document.createElement('button');
       restartButton.textContent = 'Reiniciar Conversa';
       restartButton.classList.add('restart-button');
       restartButton.addEventListener('click', resetChat);
@@ -190,16 +208,6 @@ function resetChat() {
   window.firstMessageProcessed = false;
   addMessage('Digite algo para começar!', 'bot');
   setTimeout(() => inputField.focus(), 100);
-}
-
-function showFaqs() {
-  addMessage('Olá! Como posso te ajudar? Selecione uma opção abaixo.', 'bot', Object.keys(faqs));
-  setTimeout(() => inputField.focus(), 100);
-}
-
-function isGreeting(message) {
-  const greetings = ['oi', 'olá', 'preciso de ajuda', 'como posso te ajudar'];
-  return greetings.some(greeting => message.toLowerCase().includes(greeting));
 }
 
 async function sendMessageToChatGPT(message) {
