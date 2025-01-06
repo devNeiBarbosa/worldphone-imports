@@ -90,6 +90,8 @@ header {
           border: none;
           transition: transform 0.3s ease;
           transform: rotate(0deg);
+          margin-top: 2px;
+          margin-left: -8px;
         }
 
         .arrow-expand.rotate {
@@ -99,12 +101,6 @@ header {
       }
 
       p {
-        margin-bottom: 0px;
-      }
-
-      .contact {
-        font-size: 16px;
-        cursor: pointer;
         margin-bottom: 0px;
       }
 
@@ -118,7 +114,7 @@ header {
         padding: 10px;
         position: absolute;
         margin-top: 200px;
-        margin-left: 5px;
+        margin-left: -10px;
 
         background: linear-gradient(115deg,
             rgba(19, 113, 239, 1) 10%,
@@ -137,12 +133,19 @@ header {
           cursor: pointer;
           font-weight: 500;
           color: #ffffff;
+          font-size: 14px;
 
           &:hover {
             background-size: 100% 2px;
           }
         }
       }
+    }
+
+    .contact {
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 0px;
     }
   }
 
@@ -177,8 +180,7 @@ header {
       height: 30px;
       font-size: 16px;
       font-weight: 500;
-      background-color: #1371ef;
-      border: 1px solid #1371ef;
+      background-color: #2b018b;
       border-radius: 50px;
       cursor: pointer;
 
@@ -679,10 +681,8 @@ main {
         width: 170px;
         height: 50px;
         border: none;
-        border-radius: 50px;
-        background: linear-gradient(115deg,
-            rgba(43, 1, 139, 1) 44%,
-            rgba(19, 113, 239, 1) 100%);
+        border-radius: 15px;
+        background-color: #2b018b;
         font-size: 24px;
         font-weight: bold;
         outline: none;
@@ -705,10 +705,8 @@ main {
         width: 70px;
         height: 50px;
         border: none;
-        border-radius: 50px;
-        background: linear-gradient(115deg,
-            rgba(19, 113, 239, 1) 10%,
-            rgba(43, 1, 139, 1) 100%);
+        border-radius: 15px;
+        background-color: #2b018b;
         font-size: 20px;
         font-weight: bold;
         outline: none;
@@ -1096,10 +1094,7 @@ main {
     height: 30px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(115deg,
-        #2b018b 44%,
-        #1371ef 100%);
-    border: 1px solid #2b018b;
+    background-color: #2b018b;
     outline: none;
     font-size: 14px;
     font-weight: 500;
@@ -1124,8 +1119,8 @@ main {
     height: 30px;
     border: none;
     border-radius: 10px;
-    background-color: rgba(19, 113, 239, 1);
-    border: 1px solid #2b018b;
+    background-color: #2b018b;
+
     outline: none;
     font-size: 14px;
     font-weight: 500;
@@ -1308,16 +1303,14 @@ main {
     margin-top: 10px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(115deg,
-        rgba(43, 1, 139, 1) 44%,
-        rgba(19, 113, 239, 1) 100%);
+    background-color: #2b018b ;
     font-size: 24px;
     font-weight: bold;
     outline: none;
     cursor: pointer;
 
     &:hover {
-      font-size: 26px;
+      transform: translateY(-2px);
       transition: 0.3s ease-in-out;
     }
 
@@ -1729,7 +1722,7 @@ main {
     background-color: var(--white);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
-    border-radius: 16px;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 12px;
     text-align: left;
@@ -1785,13 +1778,12 @@ main {
   }
 
   .restart-button {
-    display: block;
-    margin: 16px auto;
-    padding: 10px 24px;
-    background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--primary-color) 100%);
-    color: var(--light-gray);
-    border: none;
-    border-radius: var(--border-radius);
+    
+    padding: 6px 15px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
@@ -1801,21 +1793,14 @@ main {
   }
 
   .restart-button:hover {
-    border: none;
-    transform: scale(1.1);
-    box-shadow:
-      inset 0 2px 3px rgba(255, 255, 255, 0.3),
-      inset 0 -2px 3px rgba(0, 0, 0, 0.3),
-      0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-color);
+    color: var(--white);
   }
 
   .restart-button:active {
     animation: none;
-    transform: translateY(1px);
-    background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--primary-color) 100%);
-    box-shadow:
-      inset 0 -2px 3px rgba(255, 255, 255, 0.2),
-      inset 0 2px 3px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-color);
+    color: var(--white);
   }
 
   .whatsapp-button {

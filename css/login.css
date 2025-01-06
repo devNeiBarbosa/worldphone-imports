@@ -256,7 +256,7 @@ button[type="submit"] {
   height: 50px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(115deg, #2b018b 44%, #1371ef 100%);
+  background-color: #2b018b;
   color: white;
   font-size: 24px;
   font-weight: 500;
@@ -267,11 +267,11 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 button[type="submit"]:active {
-  transform: scale(0.9);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .container-footer {
