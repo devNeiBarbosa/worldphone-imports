@@ -180,15 +180,25 @@ header {
       height: 30px;
       font-size: 16px;
       font-weight: 500;
-      background-color: #2b018b;
+      background-color: transparent;
+      border: 1px solid #ffffff;
       border-radius: 50px;
       cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    #myButton.scrolled {
+      background-color: #2b018b;
+      border: 1px solid #2b018b;
 
       &:hover {
         background-color: transparent;
         border: 1px solid #ffffff;
         transition: 0.2s ease-in-out;
-        transform: scale(1.05);
       }
 
       &:active {
@@ -588,6 +598,7 @@ main {
   align-items: center;
   padding-top: 120px;
   overflow-x: hidden;
+  background: linear-gradient(180deg, rgba(43, 1, 139, 0.5) 0%, rgba(0, 0, 0, 1) 80%);
 
   .info-main {
     display: flex;

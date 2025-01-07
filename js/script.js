@@ -31,6 +31,19 @@ const accessoriesListOne = document.querySelector(".accessories-list-1");
 const accessoriesListTwo = document.querySelector(".accessories-list-2");
 const accessoriesListTree = document.querySelector(".accessories-list-3");
 
+function buttonScrolled() {
+  const buttonLogin = document.getElementById("myButton");
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 220) {
+      buttonLogin.classList.add('scrolled');
+    } else {
+      buttonLogin.classList.remove('scrolled');
+    }
+  });
+} 
+buttonScrolled();
+
 function visibleProductsList() {
   productsListInfo.style.visibility = "visible"
   productsListInfo.style.transform = "translateY(0)"
